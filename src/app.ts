@@ -8,6 +8,9 @@ app.get('/', (_request, response) => {
   response.type('html').send(`
     <h1>CI/CD Lab</h1>
     <h2>Welcome to the CI/CD Lab</h2>
+    <h2>Version: ${version}</h2>
+    <p>This is a simple application to demonstrate CI/CD concepts.</p>
+    <p>Use the following endpoints to check the application status:</p>
     <p>The application is running.</p>
     <p>Version ${version}</p>
   `);
