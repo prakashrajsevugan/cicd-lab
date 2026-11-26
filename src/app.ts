@@ -16,13 +16,13 @@ app.get('/', (_request, response) => {
   `);
 });
 
-// app.get('/api/version', (_request, response) => {
-//   const version = process.env.APP_VERSION ?? 'development';
+app.get('/api/version', (_request, response) => {
+  const version = process.env.APP_VERSION ?? 'development';
   
-//   response.json({
-//     version,
-//   });
-// });
+  response.json({
+    version,
+  });
+});
 
 app.get('/api/health', (_request, response) => {
   response.json({
