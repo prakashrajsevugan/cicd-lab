@@ -24,11 +24,11 @@ app.get('/api/version', (_request, response) => {
   });
 });
 
-// app.get('/api/nothing', (_request, response) => {
-//   response.status(404).json({
-//     error: 'Not Found',
-//   });
-// });
+app.get('/api/nothing', (_request, response) => {
+  response.status(404).json({
+    error: 'Not Found',
+  });
+});
 
 app.get('/api/health', (_request, response) => {
   response.json({
