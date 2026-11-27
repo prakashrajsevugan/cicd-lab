@@ -48,3 +48,12 @@ test('GET /api/version returns the application version', async () => {
     version: process.env.APP_VERSION ?? 'development',
   });
 });
+
+test('GET /api/nothing returns a 404 response', async () => {
+  const response = await fetch(`${baseUrl}/api/nothing`);
+
+  assert.equal(response.status, 404);
+  assert.deepEqual(await response.json(), {
+    error: 'Not Found',
+  });
+});
